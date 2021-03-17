@@ -8,9 +8,8 @@ const jwt = require("jsonwebtoken");
 const { SECRET_KEY } = process.env;
 const { OAuth2Client } = require("google-auth-library");
 
-const client = new OAuth2Client(
-  "606260353641-7ioqhuuoiho24ed2t775cjr07kuihr6g.apps.googleusercontent.com"
-);
+console.log(`${process.env.GOOGLE_ANDROID_CLIENT_ID}`);
+const client = new OAuth2Client(`${process.env.GOOGLE_ANDROID_CLIENT_ID}`);
 
 const ONE_YEAR = 60 * 60 * 24 * 30 * 12;
 
