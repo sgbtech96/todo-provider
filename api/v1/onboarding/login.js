@@ -18,8 +18,7 @@ module.exports = async (req, res) => {
   const { idToken } = req.body;
   const credentials = await client.verifyIdToken({
     idToken,
-    audience:
-      "606260353641-7ioqhuuoiho24ed2t775cjr07kuihr6g.apps.googleusercontent.com",
+    audience: `${process.env.GOOGLE_ANDROID_CLIENT_ID}`,
   });
   console.log(credentials);
   const { email_verified, email, given_name, picture } = credentials.payload;
