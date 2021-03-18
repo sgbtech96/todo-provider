@@ -11,7 +11,7 @@ app.use(bodyParser.json());
 
 app.get("/", (req, res) => {
   res.send(`Server is up on port ${port}!!`);
-  console.log("incoming request!");
+  // console.log("incoming request!");
 });
 app.use("/api/v1", require("./api/v1"));
 
